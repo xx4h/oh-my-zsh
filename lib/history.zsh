@@ -2,8 +2,8 @@
 if [ -z $HISTFILE ]; then
     HISTFILE=$HOME/.zsh_history
 fi
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=
+SAVEHIST=
 
 setopt extended_history
 setopt hist_expire_dups_first
