@@ -3,6 +3,8 @@ log/.zsh_history
 projects.zsh
 custom/example
 custom/example.zsh
+custom/priv.d
+custom/brain
 *.swp
 !custom/example.zshcache
 cache/

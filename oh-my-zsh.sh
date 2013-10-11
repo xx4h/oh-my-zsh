@@ -21,6 +21,16 @@ if [[ -z "$ZSH_CUSTOM" ]]; then
     ZSH_CUSTOM="$ZSH/custom"
 fi
 
+# load configs
+for conf_file ($ZSH_CUSTOM/conf.d/*.zsh); do
+    source $conf_file
+done
+
+# load privs
+for priv_file ($ZSH_CUSTOM/priv.d/*.zsh); do
+    source $priv_file
+done
+
 
 is_plugin() {
   local base_dir=$1
