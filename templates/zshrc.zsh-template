@@ -16,7 +16,7 @@ ZSH=$HOME/.zsh-xx4h
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="xx4h"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -68,8 +68,8 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -U colors && colors
 
-PS1="%{$fg_bold[red]%}%n%{$reset_color%}%{$fg_bold[cyan]%} @ %{$reset_color%}%{$fg_bold[red]%}%m%{$reset_color%} %{$fg_bold[cyan]%}%~%{$reset_color%} %{$fg_bold[red]%}%#%{$reset_color%} "
-PS2='> '
+#PS1="%{$fg_bold[red]%}%n%{$reset_color%}%{$fg_bold[cyan]%} @ %{$reset_color%}%{$fg_bold[red]%}%m%{$reset_color%} %{$fg_bold[cyan]%}%~%{$reset_color%} %{$fg_bold[red]%}%#%{$reset_color%} "
+#PS2='> '
 
 
 # deactivate terminal signal
@@ -81,7 +81,7 @@ umask 022
 
 case "$TERM" in
 xterm*|rxvt*|screen*)
-    precmd() set_prompt
+    #precmd() set_prompt
     ;;
 *)
     ;;
@@ -138,13 +138,14 @@ setopt  SHARE_HISTORY
 setopt  SHORT_LOOPS
 setopt  TRANSIENT_RPROMPT
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-export HISTFILE=~/.zsh_history
-export HISTCONTROL=ignoredups:erasedups
-
 # Set the values for some environment variables:
 VISUAL=vim
 EDITOR=vim
 QUILT_PATCHES="debian/patches"
 export VISUAL EDITOR QUILT_PATCHES
 
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+export HISTFILE=~/.zsh_history
+export HISTCONTROL=ignoredups:erasedups
+export HISTSIZE=9999999999999
+export SAVEHIST=$HISTSIZE
