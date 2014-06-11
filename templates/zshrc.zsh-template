@@ -5,6 +5,9 @@
 # - alias_any
 # - helpers
 
+PATH=:.local/bin:~/bin:/usr/lib/jvm/java-1.7.0-openjdk/bin:$PATH
+
+alias yum-update="sudo yum update --changelog"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -137,6 +140,9 @@ setopt  RC_EXPAND_PARAM
 setopt  SHARE_HISTORY
 setopt  SHORT_LOOPS
 setopt  TRANSIENT_RPROMPT
+
+# unset zsh defaults
+unsetopt no_match
 
 # Set the values for some environment variables:
 VISUAL=vim

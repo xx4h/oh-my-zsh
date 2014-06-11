@@ -23,3 +23,6 @@ function set_prompt {
 
 }
 
+function findTodoLatex {
+  perl -lne 'if (m((^| *)\\((sub|)section|paragraph){(.*)})) { $last_section=$4 ; } if (m((^| *)\%TODO)) { print "Section: " . $last_section . " has TODO!!!" } ' < $1
+}
