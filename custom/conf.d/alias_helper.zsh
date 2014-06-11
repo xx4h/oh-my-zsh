@@ -20,3 +20,5 @@ alias autoloader='vi ~/Documents/auto-loader.concept'
 # get my www-ip
 alias myip="wget -q -O - http://ipfoo.de | awk 'NR==58' | sed 's/\s*//g'"
 
+# git fix https://bugs.launchpad.net/git-review/+bug/1177429
+alias git="LANG=C git"
