@@ -8,3 +8,4 @@ custom/brain
 *.swp
 !custom/example.zshcache
 cache/
+brain/
