@@ -26,3 +26,7 @@ function set_prompt {
 function findTodoLatex {
   perl -lne 'if (m((^| *)\\((sub|)section|paragraph){(.*)})) { $last_section=$4 ; } if (m((^| *)\%TODO)) { print "Section: " . $last_section . " has TODO!!!" } ' < $1
 }
+
+function uniqFrom2 {
+  join -v1 -v2 <(sort $1) <(sort $2) > $3
+}
